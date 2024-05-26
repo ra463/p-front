@@ -74,7 +74,7 @@ const MyProperties = () => {
             </div>
           ))
         ) : loading ? (
-          <Spinner animation="border" />
+          <Spinner style={{ marginTop: "10rem" }} animation="border" />
         ) : (
           <h4>No properties found</h4>
         )}
