@@ -1,0 +1,154 @@
+.all_properties {
+    h1 {
+        color: rgb(50, 50, 50);
+        text-align: center;
+        margin: 1rem 0;
+    }
+    .filters {
+        border: 1px solid #e6e7e9;
+        border-radius: 5px;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-around;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin: 0 4rem;
+
+        select {
+            width: 12rem;
+        }
+
+        select,
+        input {
+            padding: 0.5rem;
+            border: 1px solid #d7d7d8;
+            border-radius: 5px;
+        }
+
+        .pincode,
+        .rooms,
+        .bedrooms {
+            position: relative;
+            svg {
+                cursor: pointer;
+                background: #d7d7d8;
+                height: 2.6rem;
+                width: 2.6rem;
+                padding: 0.7rem;
+                position: absolute;
+                right: 0rem;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                top: 0rem;
+                color: gray;
+            }
+        }
+    }
+    .properties {
+        margin: 2rem;
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+
+        .property {
+            width: 17rem;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e6e7e9;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-7px);
+                transition: 0.3s all ease;
+            }
+
+            .property_img {
+                position: relative;
+                img {
+                    width: 17rem;
+                    height: 14rem;
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
+                span {
+                    position: absolute;
+                    bottom: 0.5rem;
+                    left: 0.5rem;
+                    color: rgb(50, 50, 50);
+                    padding: 0.5rem;
+                    font-size: 0.9rem;
+                }
+            }
+            .property_details {
+                display: flex;
+                flex-direction: column;
+                padding: 0.5rem;
+                h3 {
+                    margin-bottom: 0.5rem;
+                }
+                .location {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    margin-bottom: 0.5rem;
+                    font-size: 0.9rem;
+                }
+                .property_features {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    gap: 0 10px;
+
+                    span {
+                        color: #3a3a3b;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        margin-bottom: 0.5rem;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .all_properties {
+        .filters {
+            margin: 0 2rem;
+        }
+        .properties {
+            margin: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .all_properties {
+        .filters {
+            select,
+            input {
+                width: 100%;
+            }
+            div {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .all_properties {
+        .filters {
+            margin: 0 0.75rem;
+        }
+        .properties {
+            margin: 0.75rem;
+            margin-top: 1rem;
+        }
+    }
+}
