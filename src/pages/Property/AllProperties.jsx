@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProperties } from "../../features/apiCall";
 import CustomPagination from "../../utils/CustomPagination";
+import { Spinner } from "react-bootstrap";
 
 const AllProperties = () => {
   const navigate = useNavigate();
@@ -154,11 +155,11 @@ const AllProperties = () => {
                   </div>
                 </div>
               ))
-            : !loading && (
-                <div className="no_property">
-                  <h1>No properties found</h1>
-                </div>
-              )}
+            : loading ? (
+            <Spinner style={{ marginTop: "7rem" }} animation="border" />
+          ) : (
+            <h4>No properties found</h4>
+          )}
         </div>
         <div className="pagination">
           {resultPerPage < filteredPropertiesCount && !loading && (
