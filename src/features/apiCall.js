@@ -11,7 +11,7 @@ export const getAllProperties = async (
   curPage,
   resultPerPage,
   searchQuery_1,
-  searchQuery_2,
+  searchInput_2,
   searchInput_3,
   searchInput_4
 ) => {
@@ -19,7 +19,7 @@ export const getAllProperties = async (
     setLoading(true);
 
     const { data } = await axiosInstance.get(
-      `/api/property/get-all-properties?city=${searchQuery_1}&state=${searchQuery_2}&pincode=${searchInput_3}&totalRooms=${searchInput_4}&currentPage=${curPage}&resultPerPage=${resultPerPage}`
+      `/api/property/get-all-properties?state=${searchQuery_1}&city=${searchInput_2}&pincode=${searchInput_3}&totalRooms=${searchInput_4}&currentPage=${curPage}&resultPerPage=${resultPerPage}`
     );
 
     if (data.success) {
