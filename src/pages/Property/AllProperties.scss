@@ -38,10 +38,21 @@
                 padding: 0.7rem;
                 position: absolute;
                 right: 0rem;
+                border-right: 1px solid #e6e7e9;
+                border-top: 1px solid #e6e7e9;
+                border-bottom: 1px solid #e6e7e9;
                 border-top-right-radius: 5px;
                 border-bottom-right-radius: 5px;
                 top: 0rem;
                 color: gray;
+
+                &:hover {
+                    background: #cecece;
+                }
+
+                &:active {
+                    background: #9c9c9c;
+                }
             }
         }
     }
