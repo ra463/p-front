@@ -22,6 +22,11 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (role !== "seller" && role !== "buyer") {
+      alert("Please select a role");
+      return;
+    }
+
     setLoading(true);
     try {
       const { data } = await axiosInstance.post("/api/user/register", {
