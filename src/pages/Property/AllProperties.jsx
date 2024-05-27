@@ -72,7 +72,7 @@ const AllProperties = () => {
             }}
             className="city"
           >
-            <option>Select State</option>
+            <option value="">Select State</option>
             {states.map((state, i) => (
               <option key={i} value={state}>
                 {state}
